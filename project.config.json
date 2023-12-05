@@ -14,6 +14,11 @@
       "fileId": "15Y_5h_7ZezPS2GACiTEHrEEcnCIn6WjjzLYDxzZuWPw",
       "type": "sheet",
       "name": "queen"
+    },
+    {
+      "fileId": "1Iz9t0naeHnaYQCDIBnXcP7w6XQ5jKoVKyDR-clPpr9M",
+      "type": "doc",
+      "name": "blog"
     }
   ],
   "to_bake": [
@@ -23,6 +28,13 @@
       "array": "books",
       "slug": "slug",
       "path": "books"
+    },
+    {
+      "template": "bake-blog",
+      "data": "blog",
+      "array": "blogs",
+      "slug": "slug",
+      "path": "blog"
     }
   ]
 }

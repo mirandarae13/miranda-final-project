@@ -10,12 +10,13 @@
   <p>Here are a list of band members.</p>
   <div class="row">
     {% for member in queen.members %}
-    <div class="col-sm-6 mb-3 mb-sm-0">
-      <div class="card">
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card text-bg-danger">
         <div class="card-body">
           <h5 class="card-title">{{ member.name }}</h5>
-          <p class="card-text">{{ member.description }}.</p>
-          <a href="https://en.wikipedia.org/wiki/Freddie_Mercury" class="btn btn-primary">wikipedia</a>
+          <h6 class="card-title">{{ member.tenure }}</h6>
+          <p class="card-text">{{ member.description }}</p>
+          <a href="{{ member.source }}">source</a>
         </div>
       </div>
     </div>
