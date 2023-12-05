@@ -1,33 +1,30 @@
 {% extends '_templates/base.njk' %}
-{% block page_title %}The Band{% endblock %}
+
+{% block page_title %}Band Members{% endblock %}
+
+{% block page_description %}The index search description for this page goes here.{% endblock %}
+
 {% block content %}
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h1>Queen Band</h1>
-        <p>Hempen halter mizzenmast deadlights gaff pillage starboard jack lee Blimey draught. Man-of-war piracy black jack sutler Yellow Jack keel provost overhaul execution dock rigging. Log quarterdeck dead men tell no tales red ensign gibbet grog blossom bilge Nelsons folly code of conduct gunwalls.</p>
-      <div class="row">
-        <div class="col-sm-6 mb-3 mb-sm-0">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+  <div class="container">
+      <h1>Queen the Band</h1>
+        <p> Queen, formed in London in 1970, embarked on a legendary musical journey that spans genres and generations. The quartet—Freddie Mercury, Brian May, Roger Taylor, and John Deacon—blazed a trail with their dynamic sound, marked by Freddie's unparalleled vocals, Brian's intricate guitar work, Roger's powerful drumming, and John's solid bass lines. From the groundbreaking "Bohemian Rhapsody" on "A Night at the Opera" to anthems like "We Will Rock You" and "We Are the Champions," Queen's discography is a tapestry of innovation. Their iconic Live Aid performance in 1985 is etched in history. </p>
+      <h2>Band Members</h2>
+        <p>This loops through data that came from a Google Docs example.</p>
+    <div class="row">
+      {% for members in queen.members %}
+        <div class="col">
+          <img src="img/{{ members.slug }}.jpg" alt="" class="img-fluid">
+          <h3><a href="members/{{ members.slug }}.html">{{ members.title }}</a></h3>
         </div>
-      <div class="row">  
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
+      <h2>Bookstores loop</h2>
+       <p>This loops through data that came from a Google Sheet example.</p>
+       <hr>
+      {% for store in bookstores.stores %}
+      <h3><a href="{{ store.url }}" target="_blank">{{ store.name }}</a></h3>
+       <p>{{ store.address}}, {{ store.city }}, {{ store.state }} {{ store.zip }}</p>
+       <hr>
+  {% endfor %}
   </div>
-</div>
 {% endblock %}

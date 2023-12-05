@@ -8,5 +8,18 @@
 <article class="container">
   <h1>Queen Band Members</h1>
   <p>Here are a list of band members.</p>
+  <div class="row">
+    {% for member in queen.members %}
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ member.name }}</h5>
+          <p class="card-text">{{ member.description }}.</p>
+          <a href="https://en.wikipedia.org/wiki/Freddie_Mercury" class="btn btn-primary">wikipedia</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </article>
 {% endblock %}
