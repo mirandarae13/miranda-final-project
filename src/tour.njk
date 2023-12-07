@@ -1,0 +1,16 @@
+{% extends '_templates/base.njk' %}
+
+{% block page_title %}Band Members{% endblock %}
+
+{% block page_description %}The index search description for this page goes here.{% endblock %}
+
+{% block content %}
+<div class="row">
+      {% for tour in queen.tour %}
+        <div class="col">
+          <h3><a href="tour/{{ tour.image }}.html">{{ tour.date }}</a></h3>
+           <h3><a href="tour/{{ tour.image }}.html">{{ tour.city }}</a></h3>
+            <h3><a href="tour/{{ tour.image }}.html">{{ tour.venue }}</a></h3>
+        </div>
+      {% endfor %}
+{% endblock %}

@@ -30,11 +30,11 @@
       "path": "books"
     },
     {
-      "template": "bake-blog",
-      "data": "blog",
-      "array": "blogs",
+      "template": "bake-members",
+      "data": "queen",
+      "array": "members",
       "slug": "slug",
-      "path": "blog"
+      "path": "member"
     }
   ]
 }
