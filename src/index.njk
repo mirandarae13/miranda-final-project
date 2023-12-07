@@ -11,7 +11,7 @@
       <h2>Band Members</h2>
         <p>Here is a list of Queen's band members.</p>
 
-  <div class="row">
+  <div class="row row-cols-auto row-cols-md-2 row-cols-lg-4">
     {% for member in queen.members %}
       <div class="col">
         <img src="img/img-queen/members/{{ member.image }}" alt="" class="img-fluid">
