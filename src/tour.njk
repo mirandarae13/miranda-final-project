@@ -5,12 +5,30 @@
 {% block page_description %}The index search description for this page goes here.{% endblock %}
 
 {% block content %}
-<div class="row">
-      {% for tour in queen.tour %}
-        <div class="col">
-          <h3><a href="tour/{{ tour.image }}.html">{{ tour.date }}</a></h3>
-           <h3><a href="tour/{{ tour.image }}.html">{{ tour.city }}</a></h3>
-            <h3><a href="tour/{{ tour.image }}.html">{{ tour.venue }}</a></h3>
-        </div>
+<div class="container">
+  <h1>Tour Dates, City and Venues!</h1>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">City</th>
+        <th scope="col">Venue</th>
+      </tr>
+    </thead>
+    {% for stops in queen.tour %}
+    <tbody>
+      <tr>
+        <td>{{ stops.date }}</td>
+        <td>{{ stops.city }}</td>
+        <td>{{ stops.venue }}</td>
+      </tr>
+    </tbody>
       {% endfor %}
+  </table>
+</div>
+
+
+
+
 {% endblock %}
